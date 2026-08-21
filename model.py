@@ -25,8 +25,14 @@ def load_base_model_and_tokenizer(
 def count_total_parameters(model):
     return int(sum(param.numel() for param in model.parameters()))
 
-# Step 3 - is_model_4bit_quantized (not yet solved)
-# TODO: implement
+# Step 3 - is_model_4bit_quantized
+import bitsandbytes as bnb
+
+def is_model_4bit_quantized(model):
+    for module in model.modules():
+        if isinstance(module, bnb.nn.Linear4bit):
+            return True
+    return False
 
 # Step 4 - ensure_pad_token (not yet solved)
 # TODO: implement
