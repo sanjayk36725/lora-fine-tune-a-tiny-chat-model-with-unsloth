@@ -108,8 +108,11 @@ def format_instruction_example(example):
 def format_all_examples(examples):
     return [format_instruction_example(ex) for ex in examples]
 
-# Step 12 - build_text_dataset (not yet solved)
-# TODO: implement
+# Step 12 - build_text_dataset
+def build_text_dataset(texts):
+    from datasets import Dataset
+
+    return Dataset.from_dict({"text": texts})
 
 # Step 13 - tokenize_text (not yet solved)
 # TODO: implement
