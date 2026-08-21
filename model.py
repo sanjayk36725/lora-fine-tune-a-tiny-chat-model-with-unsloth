@@ -73,8 +73,30 @@ def count_trainable_parameters(model):
 def trainable_fraction(trainable_count, total_count):
     return trainable_count / total_count
 
-# Step 9 - build_instruction_examples (not yet solved)
-# TODO: implement
+# Step 9 - build_instruction_examples
+def build_instruction_examples():
+    return [
+        {
+            "instruction": "What is the capital of France?",
+            "response": "The capital of France is Paris.",
+        },
+        {
+            "instruction": "Write a haiku about autumn leaves.",
+            "response": "Crimson leaves drifting\nWhisper softly to the ground\nAutumn says goodbye",
+        },
+        {
+            "instruction": "Explain what a variable is in programming.",
+            "response": "A variable is a named storage location that holds a value which can be read or changed while a program runs.",
+        },
+        {
+            "instruction": "Translate 'good morning' into Spanish.",
+            "response": "Buenos dias.",
+        },
+        {
+            "instruction": "Give one tip for staying focused while studying.",
+            "response": "Break study sessions into short, timed blocks with brief breaks in between.",
+        },
+    ]
 
 # Step 10 - format_instruction_example (not yet solved)
 # TODO: implement
