@@ -118,8 +118,9 @@ def build_text_dataset(texts):
 def tokenize_text(tokenizer, text):
     return tokenizer(text, padding=False, truncation=False)["input_ids"]
 
-# Step 14 - count_tokens (not yet solved)
-# TODO: implement
+# Step 14 - count_tokens
+def count_tokens(token_ids):
+    return len(token_ids)
 
 # Step 15 - build_training_arguments (not yet solved)
 # TODO: implement
